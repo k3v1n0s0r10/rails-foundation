@@ -1,0 +1,17 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<% if @projects.count > 0 %>
+  <p>Count: <%= @projects.count %> </p>
+  <% @projects.each do |project| %>
+    <div style="display: flex; justify-content: space-around">
+      <p>Title: <%= project.title %> </p>
+      <p>Description: <%= project.description %> </p>
+      <p>Completed: <%= project.percent_complete %> </p>
+    </div>
+  <% end %>
+<% else %>
+  <div>No items found</div>
+<% end %>
+
+
